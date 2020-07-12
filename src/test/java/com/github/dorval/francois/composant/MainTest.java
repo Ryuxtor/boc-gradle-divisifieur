@@ -26,4 +26,8 @@ public class MainTest {
     public void testCasKo() {
         Main.main(new String[]{"abcd"});
     }
+    @Test(expected = IllegalArgumentException.class)
+    public void testDiv0() {
+        Main.main(new String[]{"7", "0"});
+    }
 }
